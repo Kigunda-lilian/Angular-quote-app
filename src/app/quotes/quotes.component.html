@@ -7,7 +7,7 @@
     <div *ngFor="let quote of quotes" class="card">
       <div class="card-body">
         <app-quote [quote]='quote'></app-quote>
-        <app-quote-details [quote]='quote'></app-quote-details>
+        <app-quote-details [quote]='quote' (upVoteQuoteEvent)="upVoteQuote($event)"></app-quote-details>
       </div>
     </div>
   </div>

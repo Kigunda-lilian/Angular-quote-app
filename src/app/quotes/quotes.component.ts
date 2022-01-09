@@ -25,4 +25,9 @@ export class QuotesComponent implements OnInit {
     console.log(quote);
     console.log(this.quotes);
   }
+
+  upVoteQuote(quote: Quote) {
+    this.quotes[quote.index].upVotes++;
+    console.log(this.quotes);
+  }
 }

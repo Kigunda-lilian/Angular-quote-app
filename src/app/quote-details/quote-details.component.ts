@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Quote} from "../quote";
 
 @Component({
@@ -12,10 +12,13 @@ export class QuoteDetailsComponent implements OnInit {
   quote!: Quote;
   constructor() { }
 
+  @Output() upVoteQuoteEvent = new EventEmitter<Quote>();
+
   ngOnInit(): void {
   }
 
   upVoteQuote() {
-
+    this.quote.upVotes++;
+    this.upVoteQuoteEvent.emit(this.quote);
   }
 }
