@@ -13,6 +13,7 @@ export class QuoteDetailsComponent implements OnInit {
   constructor() { }
 
   @Output() upVoteQuoteEvent = new EventEmitter<Quote>();
+  @Output() downVoteQuoteEvent = new EventEmitter<Quote>();
 
   ngOnInit(): void {
   }
@@ -20,5 +21,10 @@ export class QuoteDetailsComponent implements OnInit {
   upVoteQuote() {
     this.quote.upVotes++;
     this.upVoteQuoteEvent.emit(this.quote);
+  }
+
+  downVoteQuote() {
+    this.quote.downVotes++;
+    this.downVoteQuoteEvent.emit(this.quote);
   }
 }

@@ -4,7 +4,7 @@
   </div>
   <div class="col-sm">
     <span (click)= 'upVoteQuote()'><i class="bi-hand-thumbs-up-fill"></i> {{quote.upVotes}}</span>
-    <i class="bi-hand-thumbs-down-fill"></i> {{quote.downVotes}}
+    <span (click)= 'downVoteQuote()'><i class="bi-hand-thumbs-down-fill"></i> {{quote.downVotes}}</span>
   </div>
 </div>
 
