@@ -8,9 +8,9 @@ import {Quote} from "../quote";
 })
 export class QuotesComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote("Jane", "Nelson Mandela", "The greatest glory in living lies not in never falling, but in rising every time we fall.", 0, 0, new Date()),
-    new Quote("Jane", "Walt Disney", "The way to get started is to quit talking and begin doing. ", 0, 0, new Date()),
-    new Quote("Jane", "Steve jobs", "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.", 0, 0, new Date()),
+    new Quote(0,"Jane", "Nelson Mandela", "The greatest glory in living lies not in never falling, but in rising every time we fall.", 0, 0, new Date()),
+    new Quote(1,"Jane", "Walt Disney", "The way to get started is to quit talking and begin doing. ", 0, 0, new Date()),
+    new Quote(2,"Jane", "Steve jobs", "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.", 0, 0, new Date()),
   ];
 
   constructor() { }
@@ -20,6 +20,7 @@ export class QuotesComponent implements OnInit {
 
   addNewQuote(quote: Quote) {
     // @ts-ignore
+    quote.index = quotes.length;
     this.quotes.push(quote)
     console.log(quote);
     console.log(this.quotes);

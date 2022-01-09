@@ -6,8 +6,8 @@
   <div class="card-columns">
     <div *ngFor="let quote of quotes" class="card">
       <div class="card-body">
-        <p class="card-text">{{quote.quote}}</p>
-        <h5 class="card-title align-content-end">{{quote.author}}</h5>
+        <app-quote [quote]='quote'></app-quote>
+        <app-quote-details [quote]='quote'></app-quote-details>
       </div>
     </div>
   </div>
