@@ -10,6 +10,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { TimePassedPipe } from './time-passed.pipe';
 import { TimeElapsedPipe } from './time-elapsed.pipe';
+import { HighestUpvotedQuoteHighlightDirective } from './highest-upvoted-quote-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TimeElapsedPipe } from './time-elapsed.pipe';
     QuoteComponent,
     QuoteDetailsComponent,
     TimePassedPipe,
-    TimeElapsedPipe
+    TimeElapsedPipe,
+    HighestUpvotedQuoteHighlightDirective
   ],
   imports: [
     BrowserModule,

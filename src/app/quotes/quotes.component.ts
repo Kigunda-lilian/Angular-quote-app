@@ -20,7 +20,7 @@ export class QuotesComponent implements OnInit {
 
   addNewQuote(quote: Quote) {
     // @ts-ignore
-    quote.index = quotes.length;
+    quote.index = this.quotes.length;
     this.quotes.push(quote)
     console.log(quote);
     console.log(this.quotes);
