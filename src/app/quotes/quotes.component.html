@@ -2,6 +2,7 @@
 
 <div class="container">
   <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+
   <br>
   <div class="card-columns">
     <div *ngFor="let quote of quotes" class="card">
